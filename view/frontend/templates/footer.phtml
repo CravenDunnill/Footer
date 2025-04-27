@@ -1,0 +1,95 @@
+<?php
+/**
+ * Static Footer Template
+ */
+?>
+<div class="cd-footer-wrapper">
+	<div class="cd-footer-container">
+		<div class="cd-footer-content">
+			<div class="cd-footer-columns">
+				<!-- Column 1: Links -->
+				<div class="cd-footer-column cd-footer-column-1">
+					<div class="cd-footer-column-title" data-role="title">
+						<span>How can we help?</span>
+					</div>
+					<div class="cd-footer-column-content" data-role="content">
+						<ul class="cd-footer-links">
+							<li><a href="<?= $block->getUrl('delivery') ?>">Delivery</a></li>
+							<li><a href="<?= $block->getUrl('returns') ?>">Returns</a></li>
+							<li><a href="<?= $block->getUrl('customer/account') ?>">My Account</a></li>
+							<li><a href="<?= $block->getUrl('terms-and-conditions') ?>">Terms & Conditions</a></li>
+							<li><a href="<?= $block->getUrl('privacy-policy') ?>">Privacy Policy</a></li>
+							<li><a href="https://www.cdjackfield.com" target="_blank" rel="noopener noreferrer">Craven Dunnill Jackfield</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- Column 2: Social Links -->
+				<div class="cd-footer-column cd-footer-column-2">
+					<div class="cd-footer-column-title" data-role="title">
+						<span>Follow us on social</span>
+					</div>
+					<div class="cd-footer-column-content" data-role="content">
+						<ul class="cd-footer-social">
+							<li>
+								<a href="https://www.facebook.com/cravendunnill" 
+								   target="_blank" 
+								   rel="noopener noreferrer" 
+								   class="cd-footer-social-link facebook">
+									Facebook
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/cravendunnill" 
+								   target="_blank" 
+								   rel="noopener noreferrer" 
+								   class="cd-footer-social-link instagram">
+									Instagram
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- Column 3: Empty space -->
+				<div class="cd-footer-column cd-footer-column-3"></div>
+				
+				<!-- Column 4: Logo and Contact -->
+				<div class="cd-footer-column cd-footer-column-4">
+					<div class="cd-footer-column-title" data-role="title">
+						<span>Get in touch...</span>
+					</div>
+					<div class="cd-footer-column-content" data-role="content">
+						<div class="cd-footer-logo">
+							<img src="<?= $block->getViewFileUrl('CravenDunnill_Footer::images/logo.svg') ?>" 
+								 alt="Craven Dunnill" />
+						</div>
+						<div class="cd-footer-contact">
+							<p class="cd-footer-contact-item cd-footer-tel">
+								Tel: <strong>01746 761611</strong>
+							</p>
+							<p class="cd-footer-contact-item cd-footer-email">
+								Email: <strong>sales@cravendunnill.co.uk</strong>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Copyright -->
+		<div class="cd-footer-copyright">
+			&copy; Craven Dunnill & Co Ltd 1872-<?= date('Y') ?>
+		</div>
+	</div>
+</div>
+
+<script type="text/x-magento-init">
+{
+	".cd-footer-column-title": {
+		"CravenDunnill_Footer/js/accordion": {
+			"mediaQuery": "(max-width: 767px)"
+		}
+	}
+}
+</script>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="CravenDunnill_Footer::css/styles.css"/>
+	</head>
+	<body>
+		<container name="before.body.end" as="before_body_end" label="Before Body End" after="-"/>
+		<referenceContainer name="before.body.end">
+			<block class="Magento\Framework\View\Element\Template" name="cravendunnill.test.footer" template="CravenDunnill_Footer::footer.phtml"/>
+		</referenceContainer>
+	</body>
+</page>
