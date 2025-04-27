@@ -91,12 +91,34 @@
 	</div>
 </div>
 
-<script type="text/x-magento-init">
-{
-	".cd-footer-column-title": {
-		"CravenDunnill_Footer/js/accordion": {
-			"mediaQuery": "(max-width: 767px)"
-		}
-	}
-}
+<script>
+	require(['jquery'], function($) {
+		'use strict';
+		
+		$(document).ready(function() {
+			// Check if we're on mobile
+			if (window.matchMedia('(max-width: 767px)').matches) {
+				console.log('Mobile view detected');
+				
+				// Initially hide all content
+				$('.cd-footer-column-content').hide();
+				
+				// Add click handlers to titles
+				$('.cd-footer-column-title').on('click', function() {
+					console.log('Title clicked');
+					
+					// Toggle active class
+					$(this).toggleClass('cd-footer-accordion-active');
+					
+					// Simple toggle instead of slideToggle
+					var content = $(this).next('[data-role="content"]');
+					if (content.is(':visible')) {
+						content.hide();
+					} else {
+						content.show();
+					}
+				});
+			}
+		});
+	});
 </script>
